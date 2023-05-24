@@ -1,0 +1,411 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+
+// variables
+$input-bg: #f8fafc;
+$black: #000000;
+$button-color: #025eff;
+$blue-shade: #226bb4;
+$grey: #d5dce7;
+$light-blue-shade: #a8c4da;
+
+$columbia-blue: #c8d9ecff;
+$uranian-blue: #acd1e9ff;
+$international-klein-blue: #1e2a52;
+$oxford-blue: #020930ff;
+$label-detail: #7f89a8;
+
+// styles
+
+main {
+  height: 100%;
+}
+
+nav {
+  padding-bottom: 20px;
+  display: flex;
+
+  > .icon-container {
+    height: 50px;
+    width: 60px;
+    background: $input-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+.main-content {
+  height: calc(100% - 100px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 40px;
+  padding-inline: 60px;
+}
+
+.logo-and-countdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .logo-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: $oxford-blue;
+      > span {
+        font-weight: 300;
+      }
+    }
+  }
+
+  .countdown {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: $international-klein-blue;
+      width: 28px;
+      height: 35px;
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+
+  .logo-bg {
+    height: 30px;
+    width: 30px;
+    background: $button-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10000px;
+  }
+}
+
+// form
+
+.form-content {
+  margin-top: 80px;
+}
+
+fieldset {
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.label-content {
+  font-size: 18px;
+  font-weight: 600;
+
+  span {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color: $label-detail;
+  }
+}
+
+.card-number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-input {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  flex: 1;
+}
+
+input {
+  border: none;
+  outline: none;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #101d47;
+  width: 100%;
+  background: none;
+}
+
+.cc-input{
+  margin-left: 1rem;
+}
+
+.input-style {
+  margin-top: 8px;
+  background: $input-bg;
+  padding: 10px 15px;
+  height: 55px;
+  border-radius: 8px;
+  border: 1px solid #f0f2f5;
+}
+
+.input-style:focus-within {
+  border: 1px solid #0057fe;
+  background: #edf3ff;
+}
+
+.row-align {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  .left {
+    flex: 1;
+  }
+}
+
+.cvv input {
+  text-align: center;
+}
+
+button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 60px;
+  margin-top: 40px;
+  border-radius: 10px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  background: $button-color;
+}
+
+.card-img {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  padding: 20px;
+}
+
+.details-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-top: auto;
+}
+
+.details {
+  margin-top: auto;
+  height: 80%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(to bottom, #e7ecf0, #eff4f8);
+  display: flex;
+
+  .details-content {
+    display: flex;
+    margin-top: auto;
+    padding: 2.2rem;
+    width: 100%;
+  }
+}
+
+.debit-card {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 55%;
+  height: 45%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.block {
+  height: 25px;
+  width: 40px;
+  border-radius: 8px;
+  background: $button-color;
+  margin: auto;
+}
+
+.chip-and-wifi {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  > img {
+    height: 40px;
+    width: 30px;
+  }
+
+  .wifi {
+    height: 22px;
+    width: 20px;
+  }
+}
+
+.info {
+  margin-top: auto;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.pin {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 500;
+
+  .inv {
+    padding-top: 10px;
+  }
+}
+
+.exp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  .mc-logo {
+    padding-top: 10px;
+  }
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      color: #1b2750;
+      font-size: 1.03rem;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.total-container {
+  padding: 2.2rem;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  // background: linear-gradient(to bottom, #e7ecf0, #eff4f8);
+  background: #eff4f8;
+  display: flex;
+  border-top: 1px dashed black;
+
+  position: relative;
+
+  .total {
+    width: 100%;
+  }
+
+  .circle1,
+  .circle2 {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: white;
+    position: absolute;
+  }
+
+  .circle1 {
+    top: -1.05rem;
+    left: -1rem;
+  }
+
+  .circle2 {
+    top: -1.05rem;
+    right: -1rem;
+  }
+}
+
+.text-and-receipt {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  
+
+  .text {
+    h4 {
+      font-size: 14px;
+      font-weight: 400;
+      color: #52565e;
+      padding-bottom: 4px;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 20px;
+      color: #101d47;
+
+      span {
+        font-size: 16px;
+        color: #101d47be;
+      }
+    }
+  }
+}
+
+
+
+.align-exp{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  input{
+    width: 100%;
+  }
+
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+
+  }
+}
