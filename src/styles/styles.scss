@@ -38,6 +38,13 @@ nav {
   }
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #025fff;
+}
+
 .main-content {
   height: calc(100% - 100px);
   width: 100%;
@@ -149,7 +156,7 @@ input {
   background: none;
 }
 
-.cc-input{
+.cc-input {
   margin-left: 1rem;
 }
 
@@ -367,8 +374,6 @@ ul {
   justify-content: space-between;
   align-items: center;
 
-  
-
   .text {
     h4 {
       font-size: 14px;
@@ -390,22 +395,19 @@ ul {
   }
 }
 
-
-
-.align-exp{
+.align-exp {
   display: flex;
   justify-content: center;
   gap: 20px;
 
-  input{
+  input {
     width: 100%;
   }
 
-  span{
+  span {
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 600;
-
   }
 }
