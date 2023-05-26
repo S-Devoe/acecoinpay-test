@@ -40,7 +40,7 @@ const FormContent = () => {
                   Enter the id-digit card number on the card.
                 </span>
               </label>
-              {/* <CardInput /> */}
+              
               <div className="icon">
                 <MdModeEdit height={16} width={16} color="#025fff" />
                 <span>Edit</span>
@@ -53,6 +53,7 @@ const FormContent = () => {
                 type="text"
                 required
                 autoFocus
+                placeholder="1234  -  5678  -  9012  -  3456"
                 id="card-num"
                 className="cc-input"
                 value={creditCardFormat(ccInput)}
@@ -72,7 +73,7 @@ const FormContent = () => {
               </label>
             </div>
             <div className="card-input cvv input-style ">
-              <input type="number" required id="cvv" />
+              <input placeholder="234" type="number" required id="cvv" />
               <TbGridDots color="#979eb0" size={25} />
             </div>
           </div>
@@ -120,7 +121,7 @@ const FormContent = () => {
               </label>
             </div>
             <div className="card-input  input-style ">
-              <input type="password" required id="password" />
+              <input placeholder="********" type="password" required id="password" />
               <TbGridDots color="#979eb0" size={25} />
             </div>
           </div>
