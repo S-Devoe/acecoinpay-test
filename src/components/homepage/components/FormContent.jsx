@@ -36,7 +36,7 @@ const FormContent = () => {
               <label htmlFor="card-num" className="label-content">
                 Card Number
                 <span className="detail">
-                  Enter the id-digit card number on the card.
+                  Enter the 16-digit card number on the card.
                 </span>
               </label>
 
