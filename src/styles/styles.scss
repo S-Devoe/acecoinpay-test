@@ -278,7 +278,39 @@ button {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  .circle1,
+  .circle2,
+  .circle3 {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    border: 1px solid #ebebeb;
+    top: 1rem;
+    left: -1rem;
+    z-index: -1;
+  }
+
+  .circle2 {
+    height: 300px;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+  }
+
+  .circle3{
+     height: 350px;
+    width: 350px;
+    top: 6rem;
+    left: 3rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 65%;
+  }
 }
 
 .block {

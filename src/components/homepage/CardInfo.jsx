@@ -11,7 +11,9 @@ const CardInfo = () => {
       <div className="debit-card">
         <div className="chip-and-wifi">
           <img className="chip" src={Chip} alt="chip" />
-          {/* <img className="wifi" src={Wifi} alt="wifi" /> */}
+          <div className="circle1"></div>
+          <div className="circle2"></div>
+          <div className="circle3"></div>
           <AiOutlineWifi size={32} color="#000a38" />
         </div>
 
