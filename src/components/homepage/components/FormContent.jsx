@@ -91,7 +91,7 @@ const FormContent = () => {
             <div className="align-exp">
               <div className="card-input cvv input-style ">
                 <input
-                  type="text"
+                  type="tel"
                   placeholder="MM"
                   required
                   id="date"
@@ -100,13 +100,7 @@ const FormContent = () => {
               </div>
               <span> / </span>
               <div className="card-input cvv input-style ">
-                <input
-                  placeholder="YY"
-                  type="text"
-                  required
-                  id="date"
-                  maxLength="2"
-                />
+                <input placeholder="YY" type="tel" required maxLength="2" />
               </div>
             </div>
           </div>
