@@ -1,10 +1,10 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: #fff;
+  background: #fefefe;
 }
 
 // variables
-$input-bg: #f8fafc;
+$input-bg: #fbfbfd;
 $black: #000000;
 $button-color: #025eff;
 $blue-shade: #226bb4;
@@ -15,7 +15,7 @@ $columbia-blue: #c8d9ecff;
 $uranian-blue: #acd1e9ff;
 $international-klein-blue: #1e2a52;
 $oxford-blue: #020930ff;
-$label-detail: #7f89a8;
+$label-detail: #969eb8;
 
 // styles
 
@@ -127,9 +127,11 @@ fieldset {
 .label-content {
   font-size: 18px;
   font-weight: 600;
+  color: #000339;
 
   span {
     display: block;
+    margin-top: 5px;
     font-weight: 400;
     font-size: 14px;
     color: $label-detail;
@@ -148,6 +150,10 @@ fieldset {
   gap: 9px;
   width: 100%;
   flex: 1;
+
+  img {
+    height: 25px;
+  }
 }
 
 input {
@@ -160,6 +166,11 @@ input {
   color: #101d47;
   width: 100%;
   background: none;
+
+  &::placeholder {
+    color: #a1aac8;
+    letter-spacing: 0.2px;
+  }
 }
 
 aside {
@@ -170,7 +181,7 @@ aside {
 }
 
 .cc-input {
-  margin-left: 1rem;
+  margin-left: 0.1rem;
 }
 
 .input-style {
@@ -179,11 +190,11 @@ aside {
   padding: 10px 15px;
   height: 55px;
   border-radius: 8px;
-  border: 1px solid #f0f2f5;
+  border: 1px solid #eaecf1;
 }
 
 .input-style:focus-within {
-  border: 1px solid #0057fe;
+  border: 1.5px solid #025eff;
   background: #edf3ff;
 }
 
@@ -211,13 +222,14 @@ button {
   border: none;
   outline: none;
   width: 100%;
-  height: 60px;
+  height: 80px;
   margin-top: 40px;
   border-radius: 10px;
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
   background: $button-color;
 }
 
@@ -300,8 +312,9 @@ button {
   margin-top: auto;
 
   h2 {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1e2a52;
   }
 }
 
@@ -309,7 +322,9 @@ button {
   display: flex;
   gap: 10px;
   align-items: center;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e2a52;
 
   .inv {
     padding-top: 10px;
@@ -322,8 +337,16 @@ button {
   justify-content: space-between;
   gap: 20px;
 
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e2a52;
+
   .mc-logo {
     padding-top: 10px;
+
+    img {
+      height: 35px;
+    }
   }
 }
 
@@ -341,13 +364,17 @@ ul {
 
     span {
       color: #1b2750;
-      font-size: 1.03rem;
-      font-weight: 500;
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 2px;
     }
 
     h3 {
-      font-size: 1rem;
-      font-weight: 400;
+      font-size: 16px;
+      color: #657196;
+      font-weight: 500;
     }
   }
 }
@@ -356,10 +383,9 @@ ul {
   padding: 2.2rem;
   width: 100%;
   border-radius: 0 0 20px 20px;
-  // background: linear-gradient(to bottom, #e7ecf0, #eff4f8);
   background: #eff4f8;
   display: flex;
-  border-top: 1px dashed black;
+  border-top: 2.5px dashed #ccd3e4;
 
   position: relative;
 
@@ -411,6 +437,13 @@ ul {
         color: #101d47be;
       }
     }
+  }
+
+  .currency {
+    margin-left: 0.25rem;
+    font-weight: 400;
+    font-size: 18px;
+    color: #eff4f8;
   }
 }
 

@@ -1,7 +1,8 @@
 import Chip from "../../assets/chip.png";
-import Wifi from "../../assets/wifi.png";
-import { RiMastercardFill } from "react-icons/ri";
 import { IoReceipt } from "react-icons/io5";
+import { DiApple } from "react-icons/di";
+import MCLogo from "../../assets/mastercard-2.svg";
+import { AiOutlineWifi } from "react-icons/ai";
 
 const CardInfo = () => {
   return (
@@ -10,7 +11,8 @@ const CardInfo = () => {
       <div className="debit-card">
         <div className="chip-and-wifi">
           <img className="chip" src={Chip} alt="chip" />
-          <img className="wifi" src={Wifi} alt="wifi" />
+          {/* <img className="wifi" src={Wifi} alt="wifi" /> */}
+          <AiOutlineWifi size={32} color="#000a38" />
         </div>
 
         <div className="info">
@@ -21,10 +23,9 @@ const CardInfo = () => {
           </div>
 
           <div className="exp">
-            <span className="exp-date"> 09 / 22 </span>
+            <span className="exp-date"> 09/22 </span>
             <span className="mc-logo">
-              {" "}
-              <RiMastercardFill size={35} />{" "}
+              <img src={MCLogo} alt="mastercard" />
             </span>
           </div>
         </div>
@@ -34,16 +35,22 @@ const CardInfo = () => {
           <div className="details-content">
             <ul>
               <li>
-                <h3>Company</h3> <span>Apple</span>
+                <h3>Company</h3>
+                <span>
+                  <span>
+                    <DiApple size={19} color="#101d47" />
+                  </span>
+                  Apple
+                </span>
               </li>
               <li>
                 <h3>Order Number</h3> <span>12345</span>
               </li>
               <li>
-                <h3>Product</h3> <span>Macbook</span>
+                <h3>Product</h3> <span>Macbook Air</span>
               </li>
               <li>
-                <h3>VAT (20%)</h3> <span>$1200</span>
+                <h3>VAT (20%)</h3> <span>$100.00</span>
               </li>
             </ul>
           </div>
@@ -58,7 +65,8 @@ const CardInfo = () => {
             <div className="text">
               <h4>You have to pay</h4>
               <p className="">
-                $1200<span>.99</span>{" "}
+                549<span>.99</span>
+                <span className="currency">USD</span>
               </p>
             </div>
 

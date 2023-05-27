@@ -1,9 +1,9 @@
 import { MdModeEdit } from "react-icons/md";
-import { RiMastercardFill } from "react-icons/ri";
 import { MdVerified } from "react-icons/md";
 import { TbGridDots } from "react-icons/tb";
 // import CardInput from "./CardInput";
 import { useState } from "react";
+import MCSymbol from "../../../assets/mc_symbol.svg";
 
 const FormContent = () => {
   // const [cardNumber, setCardNumber] = useState("");
@@ -14,18 +14,17 @@ const FormContent = () => {
     setCcInput(e.target.value);
   };
 
-  function creditCardFormat(value) {
-    const v = value
-      .replace(/\s+/g, "")
-      .replace(/[^0-9]/gi, "")
-      .substr(0, 16);
-    const parts = [];
+  function formatCreditCardNumber(input) {
+    // Remove non-numeric characters
+    const numericInput = input.replace(/\D/g, "").substr(0, 16);
 
-    for (let i = 0; i < v.length; i += 4) {
-      parts.push(v.substr(i, 4));
-    }
+    // Split the numeric input into groups of 4 digits
+    const groups = numericInput.match(/.{1,4}/g);
 
-    return parts.length > 1 ? parts.join("   -   ") : value;
+    // Add a dash after every 4 digits
+    const formattedInput = groups ? groups.join("-") : "";
+
+    return formattedInput;
   }
 
   return (
@@ -40,23 +39,23 @@ const FormContent = () => {
                   Enter the id-digit card number on the card.
                 </span>
               </label>
-              
+
               <div className="icon">
                 <MdModeEdit height={16} width={16} color="#025fff" />
                 <span>Edit</span>
               </div>
             </div>
             <div className="card-input input-style ">
-              <RiMastercardFill size={25} />
+              <img className="mc-logo" src={MCSymbol} alt="mc-logo" />
               <input
                 onChange={handleChange}
-                type="text"
+                type="tel"
                 required
                 autoFocus
                 placeholder="1234  -  5678  -  9012  -  3456"
                 id="card-num"
                 className="cc-input"
-                value={creditCardFormat(ccInput)}
+                value={formatCreditCardNumber(ccInput)}
               />
               <MdVerified color="#00a1f1" size={25} />
             </div>
@@ -121,7 +120,12 @@ const FormContent = () => {
               </label>
             </div>
             <div className="card-input  input-style ">
-              <input placeholder="********" type="password" required id="password" />
+              <input
+                placeholder="********"
+                type="password"
+                required
+                id="password"
+              />
               <TbGridDots color="#979eb0" size={25} />
             </div>
           </div>
